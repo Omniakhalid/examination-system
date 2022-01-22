@@ -105,12 +105,6 @@ SET Question = @Question,
     grade = @grade,
 	course_id = @course_id
 where  Q_id = @id
-
-
-create proc get_question @id int
-as
-select *from Question
-where Q_id =@id
 ---------------------------------------------------------
 --10
 create proc update_std_courses (@id           int,
