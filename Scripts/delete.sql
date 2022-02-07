@@ -60,7 +60,7 @@ delete_instructor 2
 
 --------------------------------------------------
 --7-- delete student answer in an exam 
-alter proc  delete_Q_ex_stud @Q_id int, @ex_id int , @stud_id int
+create proc  delete_Q_ex_stud @Q_id int, @ex_id int , @stud_id int
 as
 delete from Q_ex_stud
 where( Q_id=@Q_id and ex_id=@ex_id and stud_id=@stud_id)
@@ -80,7 +80,7 @@ delete_Question 1,2
 
 ----------------------------------------------------
 --9
-alter proc delete_stud_course @st_id int ,@crs_id int
+create proc delete_stud_course @st_id int ,@crs_id int
 as
 delete from Stud_course where stud_id=@st_id and course_id=@crs_id
 
@@ -103,10 +103,10 @@ delete from topic where topic_id=@topic_id
 delete_topic 1 
 
 ----------------------------------------------------
-create proc update_dept @name nchar(50),@id int
-with encryption
-as
-update Department
-set dept_name = @name
-where dept_id = @id
+--create proc update_dept @name nchar(50),@id int
+--with encryption
+--as
+--update Department
+--set dept_name = @name
+--where dept_id = @id
 ---------------------------------------------------
