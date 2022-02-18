@@ -39,13 +39,14 @@ on t.course_id=c.course_id and c.course_id=@crs_id
 topicsINCourse 1
 
 --5
-create proc QuestionsChoicesinExam @ex_id int 
+alter proc QuestionsChoicesinExam @ex_id int 
 as
-select q.Question from Q_ex_stud qex 
+select q.Question, e.choices from Q_ex_stud qex 
 inner join Question q
 on qex.ex_id=@ex_id and qex.Q_id=q.Q_id
 inner join Exam_choices e
 on e.Q_id=q.Q_id
+
 
 QuestionsChoicesinExam 1
 
