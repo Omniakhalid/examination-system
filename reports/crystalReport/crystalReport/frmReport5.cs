@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,10 +36,10 @@ namespace crystalReport
             DT = new DataTable();
             adapter.Fill(DT);
 
-            //ReportetDataSource(DT);
-            //crystalDocument rdc = new ReportDocument();
-            //rdc.Load(@"CrystalReport2.rpt");
-            //rdc.SReportViewer1.ReportSource = rdc;
+            ReportDocument rdc = new ReportDocument();
+            rdc.Load(@"CrystalReport5.rpt");
+            rdc.SetDataSource(DT);
+            crystalReportViewer1.ReportSource = rdc;
         }
     }
 }
