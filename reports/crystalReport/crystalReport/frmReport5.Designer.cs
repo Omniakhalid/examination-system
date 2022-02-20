@@ -103,7 +103,6 @@ namespace crystalReport
             this.Name = "frmReport5";
             this.Text = "frmReport5";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmReport5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

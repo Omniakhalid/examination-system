@@ -22,12 +22,6 @@ namespace crystalReport
         {
             InitializeComponent();
         }
-
-        private void frmReport2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnShowData_Click(object sender, EventArgs e)
         {
             SqlCN = new SqlConnection();
