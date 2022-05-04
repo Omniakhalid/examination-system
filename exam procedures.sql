@@ -37,4 +37,4 @@ as
 update Q_ex_stud 
 set std_answer = @std_answer,
 Q_id = (select q.Q_id from Question q where Q_id = @Q_id and @crs_id = q.course_id)
-where  stud_id = @id.
+where  stud_id = @id
